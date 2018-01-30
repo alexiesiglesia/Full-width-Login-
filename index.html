@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Hello, world!</title>
+
+    <style type="text/css">
+      #form_container > form > div.checkbox > button{
+        background-color: #605CA8;
+        border-radius: 0;
+        color: white;
+      }
+      #email{
+        border-radius: 0px;
+      }
+      #pwd{
+        border-radius: 0px;
+      }
+      
+      #btn_submit{
+        background-color: #605CA8;
+        color: white;
+        border-radius: 0px;
+      }
+    </style>
+
+  </head>
+  <body style="background: #D4D8E1">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 col-lg-6 offset-lg-3 col-sm-12 offset-md-2" id="container_login"  style="background-image: url('img/girls-2.png'); background-size: contain; background-repeat: no-repeat;">
+          <div id="login_box" class="" style="background: white;">
+          
+            <img src="img/iblastmologo.png" id="iblast_logo" alt="Responsive image">
+            <br>
+
+            <div id="form_container">
+              <form action="/action_page.php">
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" placeholder="name">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="pwd" placeholder="Password">
+                </div>
+                  <div class="row">
+                    <div class="col-md-7">
+                      <input type="checkbox"> Remember me 
+                    </div>
+                    <div class="col-md-5 " id="innercol_submit" style="text-align: right;">
+                      <button type="submit" id="btn_submit" class="btn btn-default  " >Sign In</button>
+                    </div>
+                  </div>
+                  
+              </form>
+            </div>
+            <br>
+           
+
+          </div>
+           <img src="img/tagline.png" id="text_reach" alt="Responsive image">
+      
+      </div>
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+
+    <script>
+      loginContainer = document.getElementById('container_login');
+      loginContainer_width = loginContainer.clientWidth + 'px';
+      loginContainer.style.height = loginContainer_width;
+      loginContainer.style.marginTop='4%';
+
+      loginBody = document.getElementById('login_box')
+      loginBody.style.margin='28% 18% 5% 18%';
+      loginBody.style.width='55%';
+      loginBody_width=document.getElementById('login_box').clientWidth ;
+      //loginBody.style.height=(loginBody_width * .76) + 'px' ;
+
+      logo = document.getElementById('iblast_logo')
+      logo.width = loginBody.clientWidth * .7;
+      logo.height = logo.width * .34;
+      logo.style.margin='3% 0% 0% '+ (logo.width*.2)+ 'px';
+
+      div_container = document.getElementById('form_container')
+      div_container.style.margin="20px"     
+
+      innercol_submit=document.getElementById('innercol_submit').offsetWidth
+      submit_width = document.getElementById("btn_submit").offsetWidth;
+      
+      text_reach = document.getElementById('text_reach')
+      text_reach.style.margin='-2% 18% 18% 17%';
+      text_reach.style.width='55%';
+      text_reach_width=document.getElementById('text_reach').clientWidth ;
+      //loginBody.style.height=(loginBody_width * .76) + 'px' ;
+
+      //document.getElementById("btn_submit").style.width = "300px";
+      
+   
+
+    </script>
+
+  </body>
+</html>
